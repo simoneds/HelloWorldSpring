@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
-<form action="#" th:action="@{/}" th:object="${somma}" method="post">
+<form action="#" th:action="@{/formAction}" th:object="${somma}" method="post">
     <table>
         <tr>
-            <td><input type="int" th:field="*{add1}" /></td>
+            <td><input type="text" th:field="*{add1}" /></td>
         </tr>
         <tr>
-            <td><input type="int" th:field="*{add2}" /></td>
+            <td><input type="text" th:field="*{add2}" /></td>
         </tr>
         <tr>
             <td><button type="submit">Somma</button></td>

@@ -23,4 +23,14 @@ public class Somma {
         this.add2 = add2;
     }
 
+    @Override
+    public String toString() {
+        return "Somma{" +
+                "add1=" + add1 +
+                ", add2=" + add2 +
+                '}';
+    }
+    public int getSomma () {
+        return add1+add2;
+    }
 }
