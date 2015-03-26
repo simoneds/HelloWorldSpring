@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+Inserisci i valori:
+<form action="#" th:object="${operazione}" th:action="@{/somma&moltiplica}">
+
+    <fieldset>
+
+        <div>
+            <label for="val1">Primo valore: </label>
+            <input type="text" th:field="*{val1}" />
+        </div>
+        <div>
+            <label for="val2">Secondo valore: </label>
+            <input type="text" th:field="*{val2}" />
+        </div>
+
+        <div>
+            <label>Type: </label>
+            <ul>
+                <li>
+                    <input type="radio" th:field="*{type}" th:value="somma" />
+                    <label>Somma</label>
+                </li>
+                <li>
+                    <input type="radio" th:field="*{type}" th:value="moltiplicat" />
+                    <label>Moltiplica</label>
+                    <ul>
+        </div>
+
+        <div class="submit">
+            <button type="submit" name="invia">Subscribe me!</button>
+        </div>
+
+    </fieldset>
+
+</form>
+</form>
+</body>
+</html>
