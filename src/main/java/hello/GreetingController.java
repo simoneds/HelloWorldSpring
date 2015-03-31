@@ -36,16 +36,16 @@ public class GreetingController {
         return "risultatoprodotto";
     }
 
-    @RequestMapping("/sommamoltiplica")
+    @RequestMapping("/sommamoltiplica2")
     public String operazione(Operazione operazione) {
         System.out.println("operazione=" + operazione);
-        return "sommamoltiplica";
+        return "sommamoltiplica2";
     }
 
     @RequestMapping("/esegui")
     public String esegui(Operazione operazione) {
         operazione.getType();
-        if (operazione.type) = "somma") {
+        if ("somma".equals(operazione.getType())) {
             return "risultatosomma";
         }
         return "risultatomoltiplica";

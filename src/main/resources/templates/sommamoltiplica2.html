@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form action="#" th:object="${operazione}" th:action="@{/esegui}">
+    <table>
+        <tr>
+            <td><input type="text" th:field="*{val1}"/></td>
+        </tr>
+        <tr>
+            <td><input type="text" th:field="*{val2}"/></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" name="action" value="somma" th:field="*{type}" th:value="somma">somma</button>
+            </td>
+            <td>
+                <button type="submit" name="action" value="moltiplica" th:field="*{type}" th:value="moltiplica">moltiplica</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
