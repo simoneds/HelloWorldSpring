@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form action="#" th:object="${calcolatriceBean}" th:action="@{/invia}">
+    <input type="text" th:field="*{val1}"/>
+    <input type="text" th:field="*{val2}"/>
+    <button type="submit" name="action" value="somma" th:field="*{type}" th:value="somma">Somma</button>
+    <button type="submit" name="action" value="differenza" th:field="*{type}" th:value="differenza">Sottrai</button>
+    <button type="submit" name="action" value="prodotto" th:field="*{type}" th:value="prodotto">Moltiplica</button>
+    <button type="submit" name="action" value="divisione" th:field="*{type}" th:value="divisione">Dividi</button>
+</form>
+</body>
+</html>

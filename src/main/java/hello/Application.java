@@ -15,11 +15,6 @@ public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        int minnie = new Integer(3);
-        String pluto = "pippo";
-        Operazione a = new Operazione();
-        String b = new String("pippo");
-
     }
 
 }

@@ -4,17 +4,17 @@
 <form action="#" th:object="${operazione}" th:action="@{/esegui}">
     <table>
         <tr>
-            <td><input type="text" th:field="*{val1}"/></td>
+            <td><input type="text" th:field="*{add1}"/></td>
         </tr>
         <tr>
-            <td><input type="text" th:field="*{val2}"/></td>
+            <td><input type="text" th:field="*{add2}"/></td>
         </tr>
         <tr>
             <td>
-                <button type="submit" name="action" value="somma" th:field="*{type}" th:value="somma">somma</button>
+                <button type="submit" name="action" value="somma" th:field="*{type}" th:value="somma">save</button>
             </td>
             <td>
-                <button type="submit" name="action" value="moltiplica" th:field="*{type}" th:value="moltiplica">moltiplica</button>
+                <button type="submit" name="action" value="moltiplica" th:field="*{type}" th:value="moltiplica">cancel</button>
             </td>
         </tr>
     </table>

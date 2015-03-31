@@ -12,13 +12,14 @@ public class Operazione {
         System.out.println("sono il costruttore");
     }
 
-    ;
-
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
+
+        System.out.println("sono setType=" + type);
+
         this.type = type;
     }
 
