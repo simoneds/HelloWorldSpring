@@ -5,13 +5,15 @@ Inserisci i fattori:
 <form action="#" th:action="@{/metodoAzione}" th:object="${prodotto}" method="post">
     <table>
         <tr>
-            <td><input type="text" th:field="*{fattore1}" /></td>
+            <td><input type="text" th:field="*{fattore1}"/></td>
         </tr>
         <tr>
-            <td><input type="text" th:field="*{fattore2}" /></td>
+            <td><input type="text" th:field="*{fattore2}"/></td>
         </tr>
         <tr>
-            <td><button type="submit">Moltiplica i fattori</button></td>
+            <td>
+                <button type="submit">Moltiplica i fattori</button>
+            </td>
         </tr>
     </table>
 </form>

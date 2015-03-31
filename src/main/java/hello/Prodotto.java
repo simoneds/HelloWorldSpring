@@ -32,7 +32,7 @@ public class Prodotto {
                 '}';
     }
 
-    public int getProdotto () {
-        return fattore1*fattore2;
+    public int getProdotto() {
+        return fattore1 * fattore2;
     }
 }

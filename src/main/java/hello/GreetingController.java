@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class GreetingController {
@@ -22,7 +21,8 @@ public class GreetingController {
 
     @RequestMapping("/formAction")
     public String formAction(Somma somma) {
-        System.out.println("La somma è:"+somma);
+        System.out.println("La somma è:" + somma);
+
         return "risultato";
     }
 
@@ -34,5 +34,20 @@ public class GreetingController {
     @RequestMapping("/metodoAzione")
     public String metodoAzione(Prodotto prodotto) {
         return "risultatoprodotto";
+    }
+
+    @RequestMapping("/sommamoltiplica")
+    public String operazione(Operazione operazione) {
+        System.out.println("operazione=" + operazione);
+        return "sommamoltiplica";
+    }
+
+    @RequestMapping("/esegui")
+    public String esegui(Operazione operazione) {
+        operazione.getType();
+        if (operazione.type) = "somma") {
+            return "risultatosomma";
+        }
+        return "risultatomoltiplica";
     }
 }
