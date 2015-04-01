@@ -4,11 +4,18 @@ public class CalcolatriceBean {
     private int val1;
     private int val2;
     private double ris;
-    private String type;
+
+    @Override
+    public String toString() {
+        return "CalcolatriceBean{" +
+                "val1=" + val1 +
+                ", val2=" + val2 +
+                ", ris=" + ris +
+                '}';
+    }
 
     public int getVal1() {
         return val1;
-
     }
 
     public void setVal1(int val1) {
@@ -23,39 +30,30 @@ public class CalcolatriceBean {
         this.val2 = val2;
     }
 
-    public String getType() {
-        return type;
+    public double getRis() {
+        return ris;
     }
 
-    public void setType(String type) {
-        System.out.println("type=" +type);
-        this.type = type;
+    public void setRis(double ris) {
+        this.ris = ris;
     }
 
-    public double getRisultato () {
-        if ("sommma".equals(getType())) {
-            return ris = val1 + val2;
-        }
-        if ("differenza".equals(getType())) {
-            return ris = val1 - val2;
-        }
-        if ("prodotto".equals(getType())) {
-            return ris = val1 * val2;
-        }
-        if ("divisione".equals(getType())) {
-            return ris = val1 / val2;
-        }
-        return 0;
-
+    public double getSomma() {
+        System.out.println("sono getSomma=" + (val1 + val2));
+        return ris = val1 + val2;
     }
 
-    @Override
-    public String toString() {
-        return "CalcolatriceBean{" +
-                "val1=" + val1 +
-                ", val2=" + val2 +
-                ", ris=" + ris +
-                ", type='" + type + '\'' +
-                '}';
+    public double getProdotto() {
+        System.out.println("sono getProdotto=" + (val1 * val2));
+        return ris = val1 * val2;
+    }
+    public double getSottrazione() {
+        System.out.println("sono getSottrazione=" +(val1 -val2));
+        return ris = val1 - val2;
+    }
+
+    public double getDivisione() {
+        System.out.println("sono getDivisione=" + (val1 / val2));
+        return ris = val1 / val2;
     }
 }
