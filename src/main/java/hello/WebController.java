@@ -1,7 +1,6 @@
 package hello;
 
 import javax.validation.Valid;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +17,7 @@ public class WebController extends WebMvcConfigurerAdapter {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/results").setViewName("results");
     }
+
 
     @RequestMapping(value="/", method=RequestMethod.GET)
     public String showForm(Person person) {

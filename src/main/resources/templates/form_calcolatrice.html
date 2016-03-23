@@ -2,12 +2,28 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <form action="#" th:object="${calcolatriceBean}" th:action="@{/invia}">
-    <input type="text" th:field="*{val1}"/>
-    <input type="text" th:field="*{val2}"/>
-    <button type="submit" name="action" value="somma">Somma</button>
-    <button type="submit" name="action" value="sottrazione">Sottrai</button>
-    <button type="submit" name="action" value="prodotto">Moltiplica</button>
-    <button type="submit" name="action" value="divisione">Dividi</button>
+    <table>
+        <tr>
+            <td><input type="text" th:field="*{val1}"/></td>
+            <td th:if="${#fields.hasErrors('val1')}" th:errors="*{val1}">Val Error</td>
+        </tr>
+        <tr>
+            <td><input type="text" th:field="*{val2}"/></td>
+            <td th:if="${#fields.hasErrors('val2')}" th:errors="*{val2}">Val Error</td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="action" value="somma">Somma</button></td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="action" value="sottrazione">Sottrai</button></td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="action" value="prodotto">Moltiplica</button></td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="action" value="divisione">Dividi</button></td>
+        </tr>
+    </table>
 </form>
 </body>
 </html>

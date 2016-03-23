@@ -1,7 +1,6 @@
 package hello;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +14,8 @@ public class ControllerCalcolatrice {
     public String calcolatriceBean (CalcolatriceBean calcolatriceBean) {
         return "form_calcolatrice";
     }
+
+
 
     @RequestMapping(value="/invia", method= RequestMethod.GET)
     public String invia(CalcolatriceBean calcolatriceBean, @RequestParam String action){
